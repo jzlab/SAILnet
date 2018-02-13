@@ -21,29 +21,29 @@ You can read more about their work [here](http://web.eecs.umich.edu/~zhengya/pap
 
 ## Installation
 
-### From source
-
 ```bash
-$ git clone https://github.com/jzlab/sailnet
-$ cd sailnet/
+$ git clone https://github.com/jzlab/SAILnet
+
+$ cd SAILnet/
 ```
 
 ## Usage
 
-### File Descriptions
-- The IMAGES.mat file contains 10 whitened natural images, from Olshausen and Field (1996), and is loaded by init.m
-- The init.m file initializes all of the simulation parameters. NOTE: this script contains a "clear all" command, so save your work before running it (or comment out that line). 
-- the SAILnet.m file runs the SAILnet simulation, calling activities.m to get neuronal activities in response to randomly selected image patches, updating network parameters, etc. 
-- SAILnet.m also calls show_network.m, which displays network statistics periodically, so you can see the solution converging. 
-- activities.m solves numerically the differential equation for leaky integrate-and-fire neuron dynamics, and returns spike counts 
-- show_network.m calls showrfs.m, which displays just the neuronal receptive fields. 
-
-### Basic usage
-
 To run SAILnet in matlab:
-```bash
+
+```matlab
 >> init
 >> SAILnet
 ```
 
-You can then hit ctrl+c at any time to stop the simulation (the network parameters at that time will still be accessible from memory). Alternatively, after a time defined by num_trials (a parameter in the init.m file), the simulation will end.
+You can then hit ctrl+c at any time to stop the simulation (the network parameters at that time will still be accessible from memory).
+Alternatively, after a time defined by num_trials (a parameter in the init.m file), the simulation will end.
+
+### File Descriptions
+
+- The IMAGES.mat file contains 10 whitened natural images, from Olshausen and Field (1996), and is loaded by init.m
+- The init.m file initializes all of the simulation parameters. NOTE: this script contains a "clear all" command, so save your work before running it (or comment out that line).
+- the SAILnet.m file runs the SAILnet simulation, calling activities.m to get neuronal activities in response to randomly selected image patches, updating network parameters, etc.
+- SAILnet.m also calls show_network.m, which displays network statistics periodically, so you can see the solution converging. 
+- activities.m solves numerically the differential equation for leaky integrate-and-fire neuron dynamics, and returns spike counts 
+- show_network.m calls showrfs.m, which displays just the neuronal receptive fields. 
